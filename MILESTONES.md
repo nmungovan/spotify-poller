@@ -14,17 +14,17 @@ Stack: Kotlin, JVM 21, Spring Boot 4.1.x, Gradle (Kotlin DSL), Postgres, Flyway,
 - [x] `compose.yaml` running Postgres; `docker compose up -d`
 - [x] Configure the datasource in `application.properties`
 - [x] App boots and connects to Postgres
-- [ ] Create a Spotify developer app; redirect URI `http://127.0.0.1:8080/callback`; secrets in `.env`
+- [x] Create a Spotify developer app; redirect URI `http://127.0.0.1:8080/callback`; secrets in `.env`
 
 **Done when:** the app starts, Flyway connects to the DB, and nothing crashes.
 
 ## Milestone 1: Schema
 
-- [ ] `V1__create_plays.sql` migration
-- [ ] Uniqueness on `(user_id, track_id, played_at)`: the natural key and the idempotency guarantee
-- [ ] Decide the timestamp type (`timestamptz`) and why
-- [ ] Decide what to store: IDs only vs. normalized tracks/artists/albums vs. raw `jsonb`
-- [ ] Table for the stored OAuth refresh token
+- [x] `V1__create_plays.sql` migration
+- [x] Uniqueness on `(user_id, track_uri, played_at)`: the natural key and the idempotency guarantee
+- [x] Decide the timestamp type (`timestamptz`) and why
+- [x] Decide what to store: IDs only vs. normalized tracks/artists/albums vs. raw `jsonb`
+- [x] Table for the stored OAuth refresh token
 
 **Design notes**
 - Spotify gives no play ID. Identity is derived from track + played time (+ user).
