@@ -15,7 +15,7 @@ class PollScheduler(private val poller: PollerService) {
 
     @Scheduled(
         initialDelayString = "\${poller.initial-delay:PT10S}",
-        fixedDelayString = "\${poller.interval:PT15M}",
+        fixedDelayString = "\${poller.interval:PT10M}",
     )
     fun run() = poller.pollAll()
 }
