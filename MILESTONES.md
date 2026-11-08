@@ -10,10 +10,10 @@ Stack: Kotlin, JVM 21, Spring Boot 4.1.x, Gradle (Kotlin DSL), Postgres, Flyway,
 
 - [x] Generate the project from start.spring.io (Web, JDBC, Flyway, PostgreSQL, Validation)
 - [x] `git init`, first commit, `.env` in `.gitignore`
-- [ ] Add Actuator (for `/actuator/health` later)
-- [ ] `compose.yaml` running Postgres; `docker compose up -d`
-- [ ] Configure the datasource in `application.properties`
-- [ ] App boots and connects to Postgres
+- [x] Add Actuator (for `/actuator/health` later)
+- [x] `compose.yaml` running Postgres; `docker compose up -d`
+- [x] Configure the datasource in `application.properties`
+- [x] App boots and connects to Postgres
 - [ ] Create a Spotify developer app; redirect URI `http://127.0.0.1:8080/callback`; secrets in `.env`
 
 **Done when:** the app starts, Flyway connects to the DB, and nothing crashes.
