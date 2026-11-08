@@ -35,11 +35,11 @@ Stack: Kotlin, JVM 21, Spring Boot 4.1.x, Gradle (Kotlin DSL), Postgres, Flyway,
 
 ## Milestone 2: Spotify auth
 
-- [ ] Read up on the OAuth 2.0 authorization code flow (access vs. refresh tokens)
-- [ ] `/login` redirects to Spotify with the `user-read-recently-played` scope
-- [ ] `/callback` exchanges the code for tokens
-- [ ] Persist the refresh token
-- [ ] Function to get a fresh access token from the refresh token
+- [x] Read up on the OAuth 2.0 authorization code flow (access vs. refresh tokens)
+- [x] `/login` redirects to Spotify with the `user-read-recently-played` scope
+- [x] `/callback` exchanges the code for tokens
+- [x] Persist the refresh token
+- [x] Function to get a fresh access token from the refresh token
 
 **Done when:** you can authorize once and the service can mint access tokens without you.
 
