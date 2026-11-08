@@ -50,6 +50,8 @@ kotlin {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+	// Keep the scheduled poll from calling Spotify during tests.
+	systemProperty("poller.enabled", "false")
 }
 
 tasks.bootRun {

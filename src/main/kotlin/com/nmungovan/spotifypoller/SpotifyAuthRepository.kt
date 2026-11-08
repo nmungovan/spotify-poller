@@ -22,6 +22,13 @@ class SpotifyAuthRepository(private val jdbc: JdbcClient) {
             .update()
     }
 
+    /** Every user who has authorized; these are the users the poller covers. */
+    fun findAllUserIds(): List<String> =
+        jdbc.sql("SELECT user_id FROM spotify_auth ORDER BY user_id")
+            .query(String::class.java)
+            .list()
+            .filterNotNull()  // user_id is NOT NULL; this just fixes the platform type
+
     fun findRefreshToken(userId: String): String? =
         jdbc.sql("SELECT refresh_token FROM spotify_auth WHERE user_id = :userId")
             .param("userId", userId)
