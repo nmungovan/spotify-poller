@@ -45,11 +45,11 @@ Stack: Kotlin, JVM 21, Spring Boot 4.1.x, Gradle (Kotlin DSL), Postgres, Flyway,
 
 ## Milestone 3: The poller
 
-- [ ] `@Scheduled` job (every ~10-20 min; the endpoint returns at most 50 plays)
-- [ ] Refresh the token, call `GET /me/player/recently-played`
-- [ ] Use the `after` cursor from the latest stored `played_at`
-- [ ] `INSERT ... ON CONFLICT DO NOTHING`
-- [ ] Overlapping polls are harmless
+- [x] `@Scheduled` job (every ~10-20 min; the endpoint returns at most 50 plays)
+- [x] Refresh the token, call `GET /me/player/recently-played`
+- [x] Use the `after` cursor from the latest stored `played_at`
+- [x] `INSERT ... ON CONFLICT DO NOTHING`
+- [x] Overlapping polls are harmless
 
 **Done when:** leaving it running for a day yields a complete, duplicate-free play history.
 
