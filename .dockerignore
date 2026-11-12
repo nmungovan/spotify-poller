@@ -11,3 +11,5 @@ Dockerfile
 .dockerignore
 decisions
 *.md
+compose.*.yaml
+dev
