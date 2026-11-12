@@ -59,7 +59,7 @@ Stack: Kotlin, JVM 21, Spring Boot 4.1.x, Gradle (Kotlin DSL), Postgres, Flyway,
 - [ ] Structured logging
 - [ ] `/actuator/health`
 - [x] Tests, including Testcontainers for Postgres
-- [ ] Dockerfile; service runs in Compose alongside Postgres
+- [x] Dockerfile; service runs in Compose alongside Postgres
 - [ ] CI via GitHub Actions
 
 **Done when:** the service survives failures without losing or duplicating data, and `docker compose up` runs the whole thing.
