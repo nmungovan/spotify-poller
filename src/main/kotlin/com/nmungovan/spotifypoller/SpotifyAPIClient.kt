@@ -7,9 +7,9 @@ import org.springframework.web.client.body
 import tools.jackson.databind.JsonNode
 
 @Component
-class SpotifyAPIClient(builder: RestClient.Builder) {
+class SpotifyAPIClient(spotify: SpotifyProperties, builder: RestClient.Builder) {
     private val client = builder
-        .baseUrl("https://api.spotify.com")
+        .baseUrl(spotify.apiBaseUrl)
         .build()
 
     fun currentUserId(accessToken: String): String =

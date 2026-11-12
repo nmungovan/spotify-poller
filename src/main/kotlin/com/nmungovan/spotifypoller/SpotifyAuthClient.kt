@@ -24,7 +24,7 @@ class SpotifyAuthClient(
     builder: RestClient.Builder
 ) {
     private val client = builder
-        .baseUrl("https://accounts.spotify.com")
+        .baseUrl(spotify.accountsBaseUrl)
         .build()
 
     /** Callback step: trade the one-time code for access + refresh tokens. */
