@@ -1,5 +1,6 @@
 package com.nmungovan.spotifypoller
 
+import com.nmungovan.spotifypoller.types.toPlay
 import org.junit.jupiter.api.Test
 import tools.jackson.databind.json.JsonMapper
 import java.time.OffsetDateTime

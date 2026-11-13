@@ -1,5 +1,6 @@
 package com.nmungovan.spotifypoller
 
+import com.nmungovan.spotifypoller.types.toPlay
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 

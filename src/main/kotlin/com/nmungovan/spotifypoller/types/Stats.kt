@@ -1,4 +1,4 @@
-package com.nmungovan.spotifypoller
+package com.nmungovan.spotifypoller.types
 
 import java.time.LocalDate
 import java.time.OffsetDateTime
