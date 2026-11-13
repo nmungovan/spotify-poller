@@ -1,0 +1,29 @@
+# Overlay that points the containerized app at a fake Spotify (WireMock) so the whole stack runs
+# with no real credentials. The mappings in dev/fake-spotify/ contain made-up data only.
+#
+# Use a separate project name so it gets its own empty database (never your real one):
+#
+#   SPOTIFY_CLIENT_ID=fake SPOTIFY_CLIENT_SECRET=fake APP_PORT=8082 \
+#     docker compose -p fakedemo -f compose.yaml -f compose.fake.yaml --profile app up --build -d
+#
+# Then seed a fake authorized user (the app has no login in this mode):
+#
+#   docker compose -p fakedemo exec -T postgres sh -c 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB"' \
+#     <<< "insert into spotify_auth (user_id, refresh_token) values ('fake-user', 'fake-refresh')"
+#
+# Tear down (removes the fake database too):
+#
+#   docker compose -p fakedemo -f compose.yaml -f compose.fake.yaml --profile app down -v
+services:
+  fake-spotify:
+    image: wiremock/wiremock:3.9.1
+    volumes:
+      - ./dev/fake-spotify:/home/wiremock:ro
+
+  app:
+    depends_on:
+      - fake-spotify
+    environment:
+      SPOTIFY_ACCOUNTS_BASE_URL: http://fake-spotify:8080
+      SPOTIFY_API_BASE_URL: http://fake-spotify:8080
+      POLLER_INTERVAL: PT20S

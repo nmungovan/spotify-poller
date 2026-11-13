@@ -1,0 +1,8 @@
+{
+  "request": { "method": "GET", "urlPath": "/v1/me" },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": { "id": "fake-user", "display_name": "Fake User" }
+  }
+}

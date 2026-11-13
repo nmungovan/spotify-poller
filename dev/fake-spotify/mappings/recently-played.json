@@ -1,0 +1,47 @@
+{
+  "request": { "method": "GET", "urlPath": "/v1/me/player/recently-played" },
+  "response": {
+    "status": 200,
+    "headers": { "Content-Type": "application/json" },
+    "jsonBody": {
+      "limit": 50,
+      "items": [
+        {
+          "track": {
+            "id": "fake0000000000000000c3",
+            "uri": "spotify:track:fake0000000000000000c3",
+            "name": "Fake Song Three",
+            "duration_ms": 201000,
+            "external_ids": { "isrc": "FAKE00000003" },
+            "artists": [{ "name": "Fake Artist" }]
+          },
+          "played_at": "2026-01-01T12:20:00.000Z",
+          "context": { "type": "playlist", "uri": "spotify:playlist:fake" }
+        },
+        {
+          "track": {
+            "id": "fake0000000000000000b2",
+            "uri": "spotify:track:fake0000000000000000b2",
+            "name": "Fake Song Two",
+            "duration_ms": 187000,
+            "external_ids": { "isrc": "FAKE00000002" },
+            "artists": [{ "name": "Fake Artist" }]
+          },
+          "played_at": "2026-01-01T12:10:00.000Z",
+          "context": null
+        },
+        {
+          "track": {
+            "id": null,
+            "uri": "spotify:local:Fake+Artist:Fake+Album:Local+Song:150",
+            "name": "Local Song",
+            "duration_ms": 150000,
+            "artists": [{ "name": "Fake Artist" }]
+          },
+          "played_at": "2026-01-01T12:00:00.000Z",
+          "context": null
+        }
+      ]
+    }
+  }
+}
