@@ -1,5 +1,7 @@
 package com.nmungovan.spotifypoller
 
+import com.nmungovan.spotifypoller.types.Play
+import com.nmungovan.spotifypoller.types.toPlay
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

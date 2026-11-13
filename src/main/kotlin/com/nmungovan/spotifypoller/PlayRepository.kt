@@ -1,5 +1,9 @@
 package com.nmungovan.spotifypoller
 
+import com.nmungovan.spotifypoller.types.DayCount
+import com.nmungovan.spotifypoller.types.Play
+import com.nmungovan.spotifypoller.types.RecentPlay
+import com.nmungovan.spotifypoller.types.TrackCount
 import org.springframework.jdbc.core.simple.JdbcClient
 import org.springframework.stereotype.Repository
 import java.time.OffsetDateTime
